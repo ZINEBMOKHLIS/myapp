@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Frontend 🚀</h1>
+
+  <button onclick="callAPI()">Call API</button>
+
+  <p id="result"></p>
+
+  <script>
+    function callAPI() {
+      fetch("http://localhost:3000/api")
+        .then(res => res.json())
+        .then(data => {
+          document.getElementById("result").innerText = data.message;
+        });
+    }
+  </script>
+</body>
+</html>
+
+
+
