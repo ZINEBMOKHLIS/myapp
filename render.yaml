@@ -2,10 +2,10 @@ version: "1"
 
 services:
   - type: web
-    name: mynodeapp
-    runtime: node
-    repo: https://github.com/ZINEBMOKHLIS/myapp
-    branch: main
-    buildCommand: npm install
-    startCommand: npm start
-    plan: free
+     name: mynodeapp
+     runtime: node
+     repo: https://github.com/ZINEBMOKHLIS/myapp
+     branch: main
+     buildCommand: npm install
+     startCommand: npm start
+     plan: free
