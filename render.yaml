@@ -1,0 +1,19 @@
+
+version: "1"
+projects:
+- name: My project
+  environments:
+  - name: Production
+    services:
+    - type: web
+      name: myapp-1
+      runtime: docker
+      repo: https://github.com/ZINEBMOKHLIS/myapp
+      plan: free
+      envVars:
+      - key: MYAPP-DEP
+        sync: false
+      region: ohio
+      dockerContext: .
+      dockerfilePath: ./Dockerfile
+      autoDeployTrigger: commit
