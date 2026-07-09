@@ -1,19 +1,12 @@
 
 version: "1"
-projects:
-- name: My project
-  environments:
-  - name: Production
+
     services:
     - type: web
-      name: myapp-1
-      runtime: docker
+      name: mynodeapp
+      runtime: node
       repo: https://github.com/ZINEBMOKHLIS/myapp
+      branch: main
+      buildCommand: npm install
+      startCommand: npm start
       plan: free
-      envVars:
-      - key: MYAPP-DEP
-        sync: false
-      region: ohio
-      dockerContext: .
-      dockerfilePath: ./Dockerfile
-      autoDeployTrigger: commit
