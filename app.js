@@ -1,10 +1,11 @@
-const express = require("express");
+const express = require('express');
 const app = express();
 
-app.get("/api", (req, res) => {
-  res.json({ message: "Hello from Render" });
+app.get('/', (req, res) => {
+  res.send('Hello Cloud Foundry 🚀');
 });
-const port = process.env.PORT || 3000;
-app.listen(port,"0.0.0.0.", () => {
-  console.log("Server running on port " +port);
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
 });

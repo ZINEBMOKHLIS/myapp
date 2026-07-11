@@ -1,6 +1,7 @@
 applications:
--name: mon-app-zineb
-memory: 64M
+-name: mynodeapp
+memory: 265M
+instances: 1
 buildpacks:
--staticfile_buildpack
+   - nodejs_buildpack
 
